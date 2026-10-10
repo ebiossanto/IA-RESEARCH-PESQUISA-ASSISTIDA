@@ -1,0 +1,39 @@
+cff-version: 1.2.0
+message: "Se você usar este material, por favor cite-o da seguinte forma."
+type: text
+title: "Pesquisa Assistida por Inteligência Artificial: ementa acadêmica e documento explicativo"
+authors:
+  - family-names: "Soares"
+    given-names: "Euzébio"
+    alias: ebiossanto
+year: 2026
+version: "1.0"
+date-released: 2026-10-10
+license: MIT
+repository-code: "https://github.com/ebiossanto/IA-RESEARCH-PESQUISA-ASSISTIDA"
+abstract: >-
+  Proposta de disciplina de 32 horas (8 encontros de 4 horas) para graduação,
+  cursos técnicos, extensão e formação inicial em pesquisa. Organiza o uso de
+  inteligência artificial dentro de um processo de investigação verificável em
+  quatro movimentos: dominar conceitos e história, preparar o ambiente
+  computacional, selecionar ferramenta e IA adequadas, e investigar com pergunta,
+  hipótese, método e auditoria. Inclui carta de encaminhamento, síntese para
+  comissão de ensino, roteiro de apresentação e dossiê em PDF.
+keywords:
+  - pesquisa assistida por IA
+  - IA generativa na educação
+  - metodologia de pesquisa
+  - ensino superior
+  - auditoria de alucinações
+  - competências digitais
+  - ementa acadêmica
+  - alfabetização em IA
+preferred-citation:
+  type: article
+  title: "Pesquisa Assistida por Inteligência Artificial: ementa acadêmica e documento explicativo"
+  authors:
+    - family-names: "Soares"
+      given-names: "Euzébio"
+  year: 2026
+  version: "1.0"
+  notes: "Proposta de disciplina de 32 horas para submissão a instituição de ensino."

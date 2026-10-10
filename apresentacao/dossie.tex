@@ -1,0 +1,669 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=2.5cm,top=3cm,bottom=3cm]{geometry}
+\usepackage{xcolor}
+\usepackage[unicode=true,colorlinks=true,linkcolor=blue!45!black,urlcolor=blue!45!black,
+            pdftitle={Pesquisa Assistida por Inteligência Artificial — Dossiê de apresentação},
+            pdfauthor={Euzébio Soares dos Santos}]{hyperref}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+\renewcommand{\contentsname}{Sumário}
+
+% ---------- macros simples ----------
+\newcommand{\sub}[1]{{\bfseries #1}\par\smallskip}
+\newcommand{\caixa}[1]{\par\smallskip\noindent\fbox{\parbox{0.97\textwidth}{\small #1}}\par\smallskip}
+\newcommand{\fluxo}{\par\smallskip\noindent\texttt{CONCEITOS E HISTÓRIA $\rightarrow$ SETUP ADEQUADO $\rightarrow$ IA ADEQUADA $\rightarrow$ HIPÓTESE E MÉTODO}\par\smallskip}
+
+\begin{document}
+
+% ============================ CAPA ============================
+\begin{titlepage}
+\centering
+\vspace*{2cm}
+{\Huge\bfseries Pesquisa Assistida por\\[6pt] Inteligência Artificial}\\[14pt]
+{\Large Ementa acadêmica e documento explicativo}\\[26pt]
+{\large CONCEITOS \ \textbullet\ \ SETUP \ \textbullet\ \ IA ADEQUADA \ \textbullet\ \ INVESTIGAÇÃO}\\[34pt]
+\begin{minipage}{0.86\textwidth}
+\small
+Uma disciplina prática para compreender um problema, preparar o ambiente computacional,
+selecionar ferramentas e inteligências artificiais adequadas e construir uma investigação
+verificável. Proposta-base para cursos de graduação, extensão e formação inicial em pesquisa.
+\end{minipage}\\[34pt]
+{\large\bfseries Dossiê de apresentação a instituição de ensino}\\[18pt]
+{\large Euzébio Soares dos Santos}\\[6pt]
+{\small Professor da Rede Estadual de Ensino de São Paulo \textbar\ Pesquisador independente}\\[26pt]
+{\small Versão 1.0 \ \textbar\ \ Outubro de 2026 \ \textbar\ \ Carga horária: 32 horas (8 encontros de 4 horas)}\\[10pt]
+{\small Repositório: \url{https://github.com/ebiossanto/IA-RESEARCH-PESQUISA-ASSISTIDA}}
+\vfill
+{\small Bibliografia básica: WILSON (2001) \textbullet\ AMBROSE et al. (2010) \textbullet\ BOOTH et al. (2019) \textbullet\ UNESCO (2024)}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+% ============================ PARTE A ============================
+\section*{Parte A --- Carta de encaminhamento}
+\addcontentsline{toc}{section}{Parte A --- Carta de encaminhamento}
+
+{\small
+\textbf{De:} Euzébio Soares dos Santos --- Professor da Rede Estadual de Ensino de São Paulo / Pesquisador independente\\
+\textbf{Para:} Direção e Colegiado de Curso / Comissão de Ensino da instituição de destino\\
+\textbf{Assunto:} Proposta de disciplina \emph{Pesquisa Assistida por Inteligência Artificial} (32 h) --- pedido de avaliação e de inclusão no currículo\\
+\textbf{Local e data:} São Paulo, outubro de 2026
+}\par\bigskip
+
+Senhoras e Senhores Membros do Colegiado,
+
+Encaminho, para avaliação, a proposta de disciplina \textbf{Pesquisa Assistida por
+Inteligência Artificial}, de carga horária de 32 horas (8 encontros de 4 horas), destinada a
+cursos de graduação, cursos técnicos, programas de extensão e à formação inicial de
+pesquisadores.
+
+O ponto de partida é simples e verificável: a IA generativa tornou fácil produzir textos,
+códigos, imagens e análises preliminares, mas facilidade de produção não equivale a
+compreensão, correção nem autoria. As instituições de ensino enfrentam hoje um dilema mal
+resolvido --- proibir (o que é ineficaz e desloca o uso para fora da sala) ou permitir sem
+critério (o que produz trabalhos plausíveis e não verificados). Esta disciplina propõe uma
+terceira via: \textbf{ensinar metodologicamente o uso da IA dentro de um processo de
+pesquisa}, com domínio conceitual, escolha consciente de ferramentas, verificação
+independente e responsabilidade autoral.
+
+A proposta organiza-se em quatro movimentos --- \textbf{DOMINAR, PREPARAR, SELECIONAR,
+INVESTIGAR} --- e termina em dois produtos auditáveis: um ambiente computacional organizado e
+um plano de investigação verificável. Não há memorização de marcas ou programas: o critério
+de seleção de ferramentas é permanente (função, adequação, segurança, verificabilidade),
+ainda que as ferramentas mudem.
+
+A fundamentação teórica é composta por quatro obras de base, registradas na bibliografia
+básica do documento:
+
+\begin{itemize}
+\item \textbf{UNESCO (2024)} orienta o uso crítico, humano e verificável da IA generativa na
+educação e na pesquisa --- é o eixo da justificativa;
+\item \textbf{AMBROSE et al. (2010)} sustenta a estrutura de aprendizagem baseada em pesquisa
+(conhecimento prévio, prática com feedback, expectativas altas, aprendiz autônomo) --- é o
+eixo da metodologia e da avaliação;
+\item \textbf{WILSON (2001)} sustenta o domínio conceitual (definir, exemplificar, contraprovar,
+relacionar) --- é o eixo das aulas 1 e 2;
+\item \textbf{BOOTH, COLOMB e WILLIAMS (2019)} sustentam a passagem de interesse a problema, de
+pergunta a hipótese e de hipótese a argumento com evidência --- é o eixo das aulas 7 e 8.
+\end{itemize}
+
+O documento encaminhado contém: a ementa acadêmica completa (Parte I), o documento
+explicativo com justificativa, princípio pedagógico, protocolos de interação e auditoria
+(Parte II) e a bibliografia básica com a articulação teórica (Parte III). O dossiê em PDF, a
+síntese para comissão e o roteiro de apresentação acompanham esta carta.
+
+Coloco-me à disposição para apresentação, ajuste de carga horária, adequação ao projeto
+pedagógico do curso e para sanar dúvidas quanto à avaliação e aos requisitos de
+infraestrutura.
+
+Atenciosamente,
+
+\textbf{Euzébio Soares dos Santos}\\
+São Paulo --- Brasil
+
+\newpage
+
+% ============================ PARTE B ============================
+\section*{Parte B --- Síntese para comissão de ensino}
+\addcontentsline{toc}{section}{Parte B --- Síntese para comissão de ensino}
+
+{\small
+\textbf{Disciplina:} Pesquisa Assistida por Inteligência Artificial\\
+\textbf{Carga horária:} 32 h (8 encontros de 4 h) \ \textbar\ \ \textbf{Natureza:} teórico-prática em laboratório\\
+\textbf{Versão:} 1.0 --- Outubro de 2026 \ \textbar\ \ \textbf{Autor:} Euzébio Soares dos Santos
+}\par\bigskip
+
+\sub{1. Problema que a disciplina resolve}
+
+{\small
+\begin{tabular}{|p{0.30\textwidth}|p{0.31\textwidth}|p{0.31\textwidth}|}
+\hline
+\textbf{Situação atual} & \textbf{Consequência} & \textbf{Resposta desta disciplina} \\
+\hline
+IA generativa produz texto, código e imagem com facilidade & Produção sem compreensão; plausibilidade confundida com correção & Exigir domínio conceitual e histórico \emph{antes} de pedir respostas à IA \\
+\hline
+Uso proibido ou não orientado & Uso clandestino, trabalhos não verificáveis, sem critério de avaliação & Metodologia explícita de uso responsável, com registro e auditoria \\
+\hline
+Ferramenta escolhida por moda & Ambiente sobrecarregado, acúmulo sem finalidade & Seleção por função: entrada, saída, fontes, risco, privacidade, verificação \\
+\hline
+Plano de pesquisa improvisado & Pergunta vaga, hipótese não examinável, método sem evidência & Pergunta $\rightarrow$ hipótese $\rightarrow$ método $\rightarrow$ evidência $\rightarrow$ auditoria \\
+\hline
+\end{tabular}
+}
+
+\sub{2. Objetivo geral}
+
+Capacitar o estudante a realizar uma investigação assistida por inteligência artificial,
+partindo do domínio dos conceitos e da história de um tema, construindo um ambiente
+computacional adequado, escolhendo as ferramentas e IAs apropriadas e elaborando uma
+hipótese, um método e um plano verificável de pesquisa.
+
+\sub{3. Os quatro movimentos da disciplina}
+
+{\small
+\textbf{1. DOMINAR} --- conceitos e história do problema (aulas 1--2) \ $\rightarrow$ \
+\textbf{2. PREPARAR} --- ambiente, arquivos, versões e segurança (aula 3) \ $\rightarrow$ \
+\textbf{3. SELECIONAR} --- ferramenta e IA adequadas a cada tarefa (aulas 4--5) \ $\rightarrow$ \
+\textbf{4. INVESTIGAR} --- pergunta, hipótese, método, evidências e auditoria (aulas 6--8).
+}
+
+\sub{4. Grade resumida (8 encontros)}
+
+{\small
+\begin{tabular}{|p{0.06\textwidth}|p{0.44\textwidth}|p{0.44\textwidth}|}
+\hline
+\textbf{Aula} & \textbf{Tema} & \textbf{Produto entregue} \\
+\hline
+1 & Do tema aos conceitos & Ficha conceitual inicial \\
+\hline
+2 & História do problema e formação do método & Linha histórico-conceitual \\
+\hline
+3 & Construção do ambiente de pesquisa & Ambiente organizado e funcional \\
+\hline
+4 & Ferramentas para cada tarefa & Mapa pessoal de ferramentas \\
+\hline
+5 & Interação produtiva com IA & Registro comparativo de interações \\
+\hline
+6 & Auditoria, verificação e alucinações & Relatório de auditoria \\
+\hline
+7 & Pergunta, hipótese e método & Núcleo da investigação \\
+\hline
+8 & Plano integrado de investigação & Plano final de investigação \\
+\hline
+\end{tabular}
+}
+
+\sub{5. Avaliação e produto final}
+
+{\small
+\begin{tabular}{|p{0.38\textwidth}|p{0.12\textwidth}|p{0.44\textwidth}|}
+\hline
+\textbf{Componente} & \textbf{Peso} & \textbf{Evidência auditável} \\
+\hline
+Conceitos e história & 25\% & Ficha conceitual + linha histórico-conceitual \\
+\hline
+Ambiente e ferramentas & 20\% & Estrutura de pastas, diário de versões, mapa de ferramentas \\
+\hline
+Interação e auditoria da IA & 25\% & Registros de interação + relatório de auditoria com classificação \\
+\hline
+Plano de investigação & 30\% & Pergunta, hipótese principal e alternativa, método, critérios, cronograma \\
+\hline
+\end{tabular}
+}
+
+\textbf{Produto final:} dossiê compacto em quatro partes --- domínio do assunto; ambiente
+preparado; estratégia de uso e auditoria de IA; pergunta, hipótese, método e plano de
+investigação.
+
+\sub{6. Requisitos mínimos}
+
+\begin{itemize}
+\item Laboratório de informática ou ambiente próprio dos estudantes (notebook com 4 GB de RAM).
+\item Editor de texto, leitor de PDF, planilha e controle de versões (todos gratuitos).
+\item Acesso a ao menos duas IAs distintas (uma textual e uma de código ou revisão crítica).
+\item Nenhum software pago é requisito; nenhum dado pessoal de estudante sai do ambiente
+institucional sem autorização.
+\end{itemize}
+
+\sub{7. O que a disciplina \emph{não} é}
+
+Não é curso de ferramenta (nenhum produto comercial é objeto de avaliação); não é treinamento
+de \emph{prompt} isolado (a instrução é uma etapa de um método maior); não é aula de
+programação, estatística ou redação (entram como instrumentos do problema escolhido); não
+substitui a orientação científica (encaminha o estudante a ela com trabalho verificável).
+
+\caixa{\textbf{Justificativa institucional em uma frase:} a instituição não precisa escolher
+entre proibir e permitir a IA: precisa ensinar, com critério e evidência, \emph{como} ela
+pode ser usada --- e esta disciplina entrega esse ensinamento em 32 horas, com produto final
+auditável.}
+
+\newpage
+
+% ============================ PARTE I ============================
+\section*{Parte I --- Ementa acadêmica}
+\addcontentsline{toc}{section}{Parte I --- Ementa acadêmica}
+
+\subsection*{1. Identificação da disciplina}
+
+{\small
+\begin{tabular}{|p{0.30\textwidth}|p{0.64\textwidth}|}
+\hline
+\textbf{Nome} & Pesquisa Assistida por Inteligência Artificial \\
+\hline
+\textbf{Carga horária sugerida} & 32 horas \\
+\hline
+\textbf{Duração} & 8 encontros de 4 horas \\
+\hline
+\textbf{Natureza} & Teórico-prática, em formato de laboratório \\
+\hline
+\textbf{Público-alvo} & Estudantes de graduação, cursos técnicos, extensão e pesquisadores iniciantes \\
+\hline
+\textbf{Produto final} & Ambiente computacional organizado e plano de investigação assistida por IA \\
+\hline
+\end{tabular}
+}
+
+\subsection*{2. Ementa}
+
+Introdução à pesquisa assistida por inteligência artificial. Estudo dos conceitos
+fundamentais e da história de um problema. Distinção entre tema, conceito, problema,
+pergunta, hipótese e método. Preparação de ambiente computacional para organização de
+arquivos, fontes, dados, registros e versões. Configuração de agente computacional, como
+OpenCode ou solução equivalente, com permissões adequadas. Seleção de aplicativos de apoio
+para texto, referências, matemática, estatística, programação, imagem, diagramas e mapas
+conceituais. Escolha da inteligência artificial conforme a natureza da tarefa. Técnicas de
+interação produtiva, decomposição de problemas e comparação de respostas. Auditoria de
+afirmações, referências, cálculos e resultados. Identificação de erros, contradições e
+alucinações. Formulação de pergunta de pesquisa, hipótese, método e plano simples,
+verificável e reprodutível de investigação.
+
+\subsection*{3. Objetivo geral}
+
+Capacitar o estudante a realizar uma investigação assistida por inteligência artificial,
+partindo do domínio dos conceitos e da história de um tema, construindo um ambiente
+computacional adequado, escolhendo as ferramentas e IAs apropriadas e elaborando uma
+hipótese, um método e um plano verificável de pesquisa.
+
+\subsection*{4. Objetivos específicos}
+
+\begin{enumerate}
+\item Identificar e compreender os conceitos fundamentais do tema escolhido.
+\item Reconstruir de forma sintética a história do problema e de seus métodos.
+\item Organizar no computador um ambiente de estudo e pesquisa seguro e reproduzível.
+\item Selecionar programas de apoio de acordo com a necessidade real da tarefa.
+\item Escolher uma ou mais IAs segundo a natureza do problema.
+\item Interagir com a IA por meio de contexto, papéis, critérios e formatos claros.
+\item Verificar afirmações, fontes, cálculos e resultados gerados ou auxiliados por IA.
+\item Identificar alucinações, omissões, contradições e excesso de confiança.
+\item Formular pergunta, hipótese, método e critérios de análise.
+\item Produzir um plano de investigação documentado e executável.
+\end{enumerate}
+
+\subsection*{5. Competências}
+
+{\small
+\begin{tabular}{|p{0.30\textwidth}|p{0.64\textwidth}|}
+\hline
+\textbf{Competência} & \textbf{Descrição} \\
+\hline
+Domínio conceitual & Definir, relacionar e delimitar os conceitos essenciais do problema. \\
+\hline
+Compreensão histórico-metodológica & Reconhecer como o problema surgiu, mudou e foi investigado ao longo do tempo. \\
+\hline
+Preparação do ambiente & Organizar arquivos, versões, fontes, dados, ferramentas e registros de modo seguro. \\
+\hline
+Seleção de ferramentas & Escolher programas e IAs pela função necessária, evitando acúmulo sem finalidade. \\
+\hline
+Colaboração produtiva com IA & Usar IA para explicar, decompor, comparar, criticar, formalizar e revisar. \\
+\hline
+Auditoria e verificação & Distinguir plausibilidade de correção e verificar resultados de forma independente. \\
+\hline
+Planejamento investigativo & Manter coerência entre problema, pergunta, hipótese, método e evidência. \\
+\hline
+Responsabilidade autoral & Registrar o uso da IA e responder pelas decisões e conclusões apresentadas. \\
+\hline
+\end{tabular}
+}
+
+\subsection*{6. Resultados de aprendizagem}
+
+Ao final da disciplina, o estudante será capaz de:
+
+\begin{enumerate}
+\item Explicar os conceitos centrais e a evolução histórica do problema escolhido.
+\item Elaborar um glossário e um mapa de relações conceituais.
+\item Configurar uma estrutura de projeto e um agente de IA com permissões controladas.
+\item Selecionar aplicativos adequados para texto, matemática, estatística, imagem, mapas e dados.
+\item Justificar a escolha de cada ferramenta e de cada IA.
+\item Formular instruções claras, decompor tarefas e comparar respostas.
+\item Auditar uma resposta de IA e classificar suas afirmações quanto à confiabilidade.
+\item Identificar e corrigir pelo menos um erro, omissão ou alucinação.
+\item Formular uma pergunta delimitada, uma hipótese examinável e uma hipótese alternativa.
+\item Definir método, evidências, critérios de análise, limitações e cronograma.
+\item Produzir um plano de investigação simples, documentado e reproduzível.
+\end{enumerate}
+
+\subsection*{7. Conteúdo programático em 8 aulas}
+
+{\small
+\begin{tabular}{|p{0.05\textwidth}|p{0.24\textwidth}|p{0.41\textwidth}|p{0.24\textwidth}|}
+\hline
+\textbf{Aula} & \textbf{Tema} & \textbf{Conteúdo central} & \textbf{Produto} \\
+\hline
+1 & Do tema aos conceitos & Tema, conceito, problema e pergunta; definições; exemplos; contraexemplos; glossário. & Ficha conceitual inicial. \\
+\hline
+2 & História do problema e formação do método & Origem dos conceitos; mudanças de definição; soluções anteriores; limitações e questões abertas. & Linha histórico-conceitual. \\
+\hline
+3 & Construção do ambiente de pesquisa & Pastas, arquivos, versões, diário, backup, privacidade, agente computacional e permissões. & Ambiente organizado e funcional. \\
+\hline
+4 & Ferramentas para cada tarefa & Programas de texto, referências, matemática, estatística, código, imagem, diagramas e mapas. & Mapa pessoal de ferramentas. \\
+\hline
+5 & Interação produtiva com IA & Contexto, papéis, decomposição, formato de saída, comparação de modelos e agentes especializados. & Registro comparativo de interações. \\
+\hline
+6 & Auditoria, verificação e alucinações & Checagem de fontes, cálculos, contradições, omissões, confiança e rastreabilidade. & Relatório de auditoria. \\
+\hline
+7 & Pergunta, hipótese e método & Delimitação; hipótese principal e alternativa; previsões; evidências; escolha do método. & Núcleo da investigação. \\
+\hline
+8 & Plano integrado de investigação & Ferramentas, IA, dados, critérios, riscos, cronograma, limitações e reprodutibilidade. & Plano final de investigação. \\
+\hline
+\end{tabular}
+}
+
+\subsection*{8. Metodologia}
+
+A disciplina funcionará como laboratório. Em cada encontro, um conteúdo curto será
+apresentado, demonstrado e imediatamente aplicado ao projeto do estudante. A ênfase estará no
+processo de pesquisa, e não na memorização de marcas ou programas. As ferramentas poderão
+mudar; o critério de seleção permanecerá baseado na função, na adequação, na segurança e na
+verificabilidade.
+
+Essa organização alinha-se aos princípios de ensino baseados em pesquisa: a aprendizagem
+depende do que o estudante já sabe e de como organiza esse conhecimento, é sustentada por
+metas claras, prática com feedback frequente e um clima que favoreça a tomada de
+responsabilidade pelo próprio aprendizado (AMBROSE et al., 2010). Por isso cada aula termina
+em \textbf{produto observável} e cada avaliação recai sobre trabalho produzido, não sobre
+memorização.
+
+\subsection*{9. Avaliação}
+
+{\small
+\begin{tabular}{|p{0.60\textwidth}|p{0.20\textwidth}|}
+\hline
+\textbf{Componente} & \textbf{Peso} \\
+\hline
+Conceitos e história & 25\% \\
+\hline
+Ambiente e ferramentas & 20\% \\
+\hline
+Interação e auditoria da IA & 25\% \\
+\hline
+Plano de investigação & 30\% \\
+\hline
+\end{tabular}
+}
+
+A avaliação é por portfólio: cada componente corresponde a um produto do dossiê final e pode
+ser auditado de forma independente pela banca.
+
+\subsection*{10. Produto final}
+
+Um dossiê compacto composto por quatro partes: domínio do assunto; ambiente preparado;
+estratégia de uso e auditoria de IA; pergunta, hipótese, método e plano de investigação.
+
+\newpage
+
+% ============================ PARTE II ============================
+\section*{Parte II --- Documento explicativo}
+\addcontentsline{toc}{section}{Parte II --- Documento explicativo}
+
+\subsection*{1. Justificativa}
+
+A inteligência artificial tornou fácil produzir textos, códigos, imagens e análises
+preliminares. Isso, porém, não garante compreensão nem correção. A dificuldade educacional
+não está apenas em permitir ou proibir a IA, mas em ensinar o estudante a utilizá-la dentro
+de um processo de pesquisa que preserve domínio conceitual, escolha consciente de ferramentas,
+verificação independente e responsabilidade humana.
+
+O guia da UNESCO para a IA generativa na educação e na pesquisa (UNESCO, 2024) orienta no
+mesmo sentido: a formação crítica e o acompanhamento humano devem vir antes da ferramenta ---
+é preciso desenvolver no estudante a capacidade de usar a IA generativa com discernimento,
+verificar o que ela produz e assumir a autoria do que apresenta. A disciplina é, portanto,
+uma resposta institucional a essa demanda: em vez de regras de proibição, uma metodologia
+explícita de uso responsável.
+
+A disciplina propõe uma resposta prática: antes de solicitar respostas à IA, o estudante
+compreende os conceitos e a história do problema; depois prepara seu ambiente de trabalho;
+em seguida escolhe a ferramenta ou IA adequada; por fim formula e audita uma investigação.
+
+{\small
+\textbf{1. DOMINAR} --- conceitos, relações, história e limites do problema.\\
+\textbf{2. PREPARAR} --- ambiente computacional, arquivos, programas e segurança.\\
+\textbf{3. SELECIONAR} --- ferramenta e IA adequadas para cada tarefa.\\
+\textbf{4. INVESTIGAR} --- pergunta, hipótese, método, evidências e auditoria.
+}
+
+\subsection*{2. O princípio pedagógico}
+
+A IA pode ampliar a pesquisa, mas não substitui o domínio dos conceitos, a escolha do
+método, a verificação dos resultados nem a responsabilidade pela conclusão.
+
+O fluxo da disciplina é deliberadamente simples:
+
+\fluxo
+
+\subsection*{3. O que significa dominar os conceitos}
+
+Dominar um conceito não significa decorar uma definição. Significa saber explicar o que ele
+designa, como se relaciona com outros conceitos, onde se aplica, quais são seus exemplos e
+contraexemplos, como surgiu e quais limites possui. É exatamente o programa de análise de
+conceitos defendido por Wilson (2001): definir, exemplificar, contraprovar, relacionar e
+organizar --- o conceito é dominado quando o estudante consegue operar com ele em situações
+novas, não quando consegue repeti-lo.
+
+Roteiro de verificação de domínio conceitual:
+
+\begin{enumerate}
+\item Qual é a definição adotada?
+\item Existem definições concorrentes?
+\item Quais exemplos e contraexemplos testam a definição?
+\item Como o conceito mudou historicamente?
+\item Que problema ele ajuda a formular?
+\item O que ainda permanece incerto?
+\end{enumerate}
+
+\subsection*{4. O setup como laboratório pessoal}
+
+O setup é a combinação organizada de arquivos, aplicativos, agentes e procedimentos que dá
+suporte à investigação. Ele deve ser suficiente para o problema, mas não excessivo. O
+estudante começa com uma estrutura mínima e acrescenta ferramentas somente quando surge uma
+necessidade real.
+
+\sub*{4.1 Estrutura sugerida}
+
+{\small\begin{verbatim}
+projeto-pesquisa/
+|-- 01_conceitos/
+|-- 02_historia/
+|-- 03_fontes/
+|-- 04_dados/
+|-- 05_experimentos/
+|-- 06_resultados/
+|-- 07_imagens/
+|-- 08_interacoes_ia/
+|-- 09_auditoria/
+`-- 10_relatorio/
+\end{verbatim}}
+
+\sub*{4.2 Categorias de ferramentas}
+
+{\small
+\begin{tabular}{|p{0.26\textwidth}|p{0.68\textwidth}|}
+\hline
+\textbf{Categoria} & \textbf{Finalidade} \\
+\hline
+Organização & Pastas, notas, controle de versões, backup e diário. \\
+\hline
+Texto e referências & Editor, Markdown, leitor de PDF e gerenciador bibliográfico. \\
+\hline
+Matemática & Calculadora simbólica, gráficos, equações e caderno computacional. \\
+\hline
+Estatística e dados & Planilha, ambiente estatístico e visualização. \\
+\hline
+Imagem e mapas & Editor de imagem, diagramas, fluxogramas, mapas mentais e conceituais. \\
+\hline
+Automação & Editor de código, terminal, controle de versões e agente computacional. \\
+\hline
+\end{tabular}
+}
+
+\subsection*{5. Como escolher a IA adequada}
+
+Não é necessário utilizar a mesma IA para todas as tarefas. A escolha deve considerar o
+tipo de entrada, o tipo de saída, a necessidade de fontes, o risco de erro, a privacidade
+dos dados, a capacidade de cálculo ou código e a possibilidade de verificação.
+
+\begin{itemize}
+\item \textbf{Explicação conceitual:} priorizar clareza, comparação de definições e exemplos.
+\item \textbf{Pesquisa documental:} priorizar rastreabilidade, fontes e acesso aos documentos.
+\item \textbf{Matemática e estatística:} exigir passos, hipóteses e conferência em ferramenta independente.
+\item \textbf{Programação:} utilizar ambiente com arquivos, testes, controle de versões e permissões.
+\item \textbf{Imagem e diagramas:} definir objetivo visual e conferir fidelidade ao conteúdo.
+\item \textbf{Revisão crítica:} utilizar uma IA ou agente separado para procurar falhas e alternativas.
+\end{itemize}
+
+\subsection*{6. Protocolo de interação produtiva}
+
+Uma boa interação fornece à IA condições para compreender a tarefa e oferece ao estudante
+condições para avaliar a resposta. O roteiro mínimo é:
+
+\begin{enumerate}
+\item Problema e contexto.
+\item Conceitos já definidos.
+\item Tarefa específica.
+\item Restrições e ações proibidas.
+\item Formato de saída esperado.
+\item Fontes ou evidências necessárias.
+\item Critérios de qualidade.
+\item Procedimento de verificação.
+\end{enumerate}
+
+\subsection*{7. Auditoria e alucinações}
+
+Uma alucinação é uma resposta apresentada com aparência de segurança, mas que contém
+informação inventada, distorcida ou não sustentada. O estudante não deve auditar apenas o
+texto final; deve separar as afirmações importantes e examinar cada uma.
+
+{\small
+\begin{tabular}{|p{0.42\textwidth}|p{0.52\textwidth}|}
+\hline
+\textbf{Pergunta de auditoria} & \textbf{Ação} \\
+\hline
+A afirmação é verificável? & Transformá-la em uma proposição clara. \\
+\hline
+A fonte existe? & Localizar o documento original. \\
+\hline
+A fonte sustenta a afirmação? & Ler o trecho e o contexto. \\
+\hline
+Há cálculo envolvido? & Refazer em ferramenta independente. \\
+\hline
+Há outra explicação? & Produzir hipótese alternativa. \\
+\hline
+Qual o grau de confiança? & Classificar e justificar. \\
+\hline
+\end{tabular}
+}
+
+\textbf{Classificação recomendada:} confirmado; parcialmente confirmado; contradito; não
+verificável; incerto; deve ser reformulado.
+
+\subsection*{8. Hipótese, método e plano de investigação}
+
+A etapa final reúne todo o trabalho. A pergunta deve ser delimitada; a hipótese deve gerar
+uma expectativa observável; e o método deve produzir evidências capazes de apoiar, limitar
+ou contrariar a hipótese. É a passagem que Booth, Colomb e Williams (2019) descrevem como o
+núcleo da pesquisa: transformar um interesse em problema, o problema em pergunta respondível
+e a pergunta em uma resposta provisória --- a hipótese --- que só se sustenta quando
+sustentada por evidência e argumento.
+
+{\small
+\begin{tabular}{|p{0.22\textwidth}|p{0.72\textwidth}|}
+\hline
+\textbf{Elemento} & \textbf{Pergunta correspondente} \\
+\hline
+Problema & Qual dificuldade ou lacuna será investigada? \\
+\hline
+Pergunta & O que exatamente se deseja descobrir? \\
+\hline
+Hipótese & Que resultado é esperado, em quais condições e por quê? \\
+\hline
+Método & Que procedimento poderá examinar a hipótese? \\
+\hline
+Evidência & Que observação apoiaria ou contrariaria a hipótese? \\
+\hline
+\end{tabular}
+}
+
+\subsection*{9. Modelo do plano final}
+
+\begin{enumerate}
+\item Título provisório.
+\item Tema e delimitação.
+\item Conceitos fundamentais.
+\item Síntese histórica do problema.
+\item Pergunta de pesquisa.
+\item Hipótese principal e hipótese alternativa.
+\item Método e procedimentos.
+\item Dados, documentos ou fontes necessários.
+\item Ferramentas e IAs selecionadas, com justificativa.
+\item Critérios de auditoria e verificação.
+\item Resultados possíveis e interpretação.
+\item Riscos, limitações e cuidados éticos.
+\item Cronograma de execução.
+\item Registro de uso da IA.
+\end{enumerate}
+
+\subsection*{10. Conclusão}
+
+A proposta não busca ensinar todas as áreas que podem participar de uma pesquisa. Ela
+ensina o estudante a construir um caminho de investigação e a convocar os recursos
+necessários no momento adequado. Matemática, estatística, programação, história, texto e
+imagem entram como instrumentos do problema, não como blocos isolados.
+
+O resultado esperado é um pesquisador iniciante capaz de \textbf{compreender antes de
+automatizar, preparar antes de executar, escolher antes de utilizar e verificar antes de
+concluir}.
+
+\newpage
+
+% ============================ PARTE III ============================
+\section*{Parte III --- Bibliografia e articulação teórica}
+\addcontentsline{toc}{section}{Parte III --- Bibliografia e articulação teórica}
+
+\subsection*{Bibliografia básica}
+
+\begin{enumerate}
+\item AMBROSE, Susan A.; BRIDGES, Michael W.; DiPIETRO, Michele; LOVETT, Marsha C.; NORMAN,
+Marie K. \textbf{How Learning Works: Seven Research-Based Principles for Smart Teaching}.
+San Francisco: Jossey-Bass, 2010.
+
+\item BOOTH, Wayne C.; COLOMB, Gregory G.; WILLIAMS, Joseph M. \textbf{A arte da pesquisa}.
+3. ed. São Paulo: Martins Fontes, 2019.
+
+\item UNESCO. \textbf{Guia para a IA generativa na educação e na pesquisa}. Paris: UNESCO, 2024.
+
+\item WILSON, John. \textbf{Pensar com conceitos}. Tradução de Waldéa Barcellos. São Paulo:
+Martins Fontes, 2001.
+\end{enumerate}
+
+\subsection*{Como a bibliografia sustenta a proposta}
+
+{\small
+\begin{tabular}{|p{0.22\textwidth}|p{0.47\textwidth}|p{0.25\textwidth}|}
+\hline
+\textbf{Obra} & \textbf{O que sustenta na disciplina} & \textbf{Onde aparece} \\
+\hline
+WILSON (2001) & Análise de conceitos: definir, exemplificar, contraprovar, relacionar e organizar mapas de conceitos. & Aulas 1--2; Parte II, seção 3 (domínio conceitual). \\
+\hline
+AMBROSE et al. (2010) & Sete princípios de ensino baseados em pesquisa: conhecimento prévio, organização do saber, motivação, prática com feedback, clima, expectativas altas e formação de aprendizes autônomos. & Parte I, seções 8--9 (metodologia e avaliação); sequência das 8 aulas. \\
+\hline
+UNESCO (2024) & Uso crítico e humano da IA generativa em educação e pesquisa; verificação, ética e autoria. & Parte II, seção 1 (justificativa); Parte I, seção 2 e Parte II, seções 5--7. \\
+\hline
+BOOTH et al. (2019) & Do interesse ao problema, da pergunta à hipótese, do argumento à evidência e à apresentação dos resultados. & Aulas 7--8; Parte II, seções 8--9 (pergunta, hipótese, método e plano). \\
+\hline
+\end{tabular}
+}
+
+\subsection*{Como citar este trabalho}
+
+{\small
+SOARES, Euzébio. \textbf{Pesquisa Assistida por Inteligência Artificial: ementa acadêmica e
+documento explicativo}. Versão 1.0. São Paulo, 2026. Disponível em:
+\url{https://github.com/ebiossanto/IA-RESEARCH-PESQUISA-ASSISTIDA}.
+}
+
+\end{document}
